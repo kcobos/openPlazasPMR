@@ -12,5 +12,5 @@ class TestCiudad( unittest.TestCase ):
         grana = granada("plazas_granada.kml")
         self.assertIsInstance(grana, granada, "Creada correctamente" )
         print(grana)
-        self.assertIn( "Percebe", grana.csv(), "CSV correcto" )
+        self.assertIn( "SAN", grana.csv(), "CSV correcto" )
         

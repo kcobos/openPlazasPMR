@@ -1,7 +1,9 @@
 import xml.etree.ElementTree as ET
-from plaza import plaza
 
-class granada(plaza):
+from plaza import plaza
+from ciudad import ciudad
+
+class granada(ciudad):
 
     def __init__(self,file ):
         self.pmrs = []
