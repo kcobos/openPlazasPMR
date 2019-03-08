@@ -9,7 +9,7 @@ root = tree.getroot()
 
 print("\"id\";\"direccion\";\"numero\";\"num_plazas\";\"observacion\";\"latitud\";\"longitud\"")
 id = 0
-plazas = []
+plazas_granada = []
 for node in tree.findall("{http://www.opengis.net/kml/2.2}Document/{http://www.opengis.net/kml/2.2}Folder/{http://www.opengis.net/kml/2.2}Placemark"):
     # print(node.tag, node.attrib,)# node.text)
     direccion = None
@@ -47,5 +47,7 @@ for node in tree.findall("{http://www.opengis.net/kml/2.2}Document/{http://www.o
             latitud =  spl[1].strip()
             print(";", spl[0].strip(), sep="")
             longitud =  spl[1].strip()
-    plazas.push( plazas( direccion, numero, plazas, observacion, latitud, longitud ) )
+    plazas_granada.append( plaza( direccion, numero, num_plazas, observacion, latitud, longitud ) )
     id+=1
+
+print(plazas_granada)
