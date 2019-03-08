@@ -13,6 +13,7 @@ class ciudad:
         csv = ""
         csv = csv + plaza.csv_header()
         for pmr in self.pmrs:
+            print(pmr)
             csv = csv + pmr.csv() 
 
         return csv

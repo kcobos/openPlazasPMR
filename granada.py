@@ -1,12 +1,13 @@
 import xml.etree.ElementTree as ET
+from plaza import plaza
 
 class granada(plaza):
 
     def __init__(self,file ):
+        self.pmrs = []
         tree = ET.parse(file)
         root = tree.getroot()
 
-        print("\"id\";\"direccion\";\"numero\";\"num_plazas\";\"observacion\";\"latitud\";\"longitud\"")
         id = 0
         for node in tree.findall("{http://www.opengis.net/kml/2.2}Document/{http://www.opengis.net/kml/2.2}Folder/{http://www.opengis.net/kml/2.2}Placemark"):
             # print(node.tag, node.attrib,)# node.text)
@@ -18,20 +19,21 @@ class granada(plaza):
                 via = via_arr[1:]+[via_arr[0]]
                 via = " ".join(via)
                 via = via.replace("  ", " ").strip()
-                print(id,";\"",via,"\"", sep="", end="")
+                direccion = via
                 num_ini = text.find("NÚMERO") + 17
                 num_fin = text.find("</", num_ini)
-                print(";\"", text[num_ini:num_fin].strip(), "\"", sep="", end="")
+                numero = text[num_ini:num_fin].strip() 
                 pla_ini = text.find("PLAZAS") + 17
                 pla_fin = text.find("</", pla_ini)
-                print(";", text[pla_ini:pla_fin].strip(), sep="", end="")
+                plazas =   text[pla_ini:pla_fin].strip()
                 obs_ini = text.find("OBSERVACIÓN") + 22
                 obs_fin = text.find("</", obs_ini)
-                print(";\"", text[obs_ini:obs_fin], "\"", sep="", end="")
+                nota = text[obs_ini:obs_fin]
                 
             for coor in node.iter("{http://www.opengis.net/kml/2.2}Point"):
                 for c in coor.iter("{http://www.opengis.net/kml/2.2}coordinates"):
                     spl = c.text.split(",")
-                    print(";", spl[1].strip(), sep="", end="")
-                    print(";", spl[0].strip(), sep="")
-        id+=1
+                    latitud  =  spl[1].strip()
+                    longitud = spl[0].strip()
+                    
+        self.pmrs.append(plaza(direccion, numero, plazas, nota, latitud, longitud))
