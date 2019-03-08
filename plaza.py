@@ -6,4 +6,9 @@ class plaza:
             self.nota = nota
             self.latitud = latitud
             self.longitud = longitud
-            
+
+      def csv_header():
+            return "direccion,numero,plazas,nota,latitud,longitud"
+
+      def csv( self ):
+            return "{}, {}, {}, {}, {}, {}".format(self.direccion,self.numero,self.plazas,self.nota,self.latitud,self.longitud)
