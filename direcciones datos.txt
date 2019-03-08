@@ -1,3 +1,4 @@
 Granada: http://www.movilidadgranada.com/kml/pmr201705.kmz
 Malaga: http://callejero.malaga.eu/?gplayers=aparcamiento-movilidad-reducida
 Sevilla: https://www.google.com/maps/d/u/0/viewer?msa=0&hl=es&ie=UTF8&t=m&ll=37.395937%2C-5.997677000000067&spn=0.047732%2C0.085831&z=13&source=embed&mid=1zZf1zvrl4c9zgM4SejkoADrMhoQ
+Huelva: http://www.huelva.es/infotrafico/listaAparcamientos.html (http://www.huelva.es/infotrafico/ListaAparcamientoparaMinusvalidos.pdf)
