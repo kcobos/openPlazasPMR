@@ -1,9 +1,19 @@
-Granada: http://www.movilidadgranada.com/par_pmr.php (http://www.movilidadgranada.com/kml/pmr201705.kmz)
-Malaga: http://callejero.malaga.eu/?gplayers=aparcamiento-movilidad-reducida (http://sig.malaga.eu/territorio/servicios/geoportal/datosabiertos/dataset/?resource=da_aparcamientosmovilidadreducida)
-Sevilla: http://discapacidadsevilla.org/gdas/estacionamientos.html (https://www.google.com/maps/d/u/0/viewer?msa=0&hl=es&ie=UTF8&t=m&ll=37.395937%2C-5.997677000000067&spn=0.047732%2C0.085831&z=13&source=embed&mid=1zZf1zvrl4c9zgM4SejkoADrMhoQ)
-Huelva: http://www.huelva.es/infotrafico/listaAparcamientos.html (http://www.huelva.es/infotrafico/ListaAparcamientoparaMinusvalidos.pdf)
-Córdoba: https://movilidad.cordoba.es/movilidad/informaciontrafico (https://movilidad.cordoba.es/informaciontrafico/index.php?minusvalidos=1&fechaInicio=2019-03-08)
-Almería: Información solicitada en: https://transparencia.aytoalmeria.es/acceso-a-la-informacion/
-Huelva: Información solicitada al correo en: http://www.huelva.es/portal/es/tr%C3%A1fico-y-movilidad
-Cádiz: Información solicitada al correo disponible en: https://transparencia.cadiz.es/contacta/
-Jáen: Información solicitada al correo disponible en http://www.aytojaen.es/portal/p_1_principal1.jsp?codResi=1
+Capitales de provincia:
+  Granada: http://www.movilidadgranada.com/par_pmr.php (http://www.movilidadgranada.com/kml/pmr201705.kmz)
+  Malaga: http://callejero.malaga.eu/?gplayers=aparcamiento-movilidad-reducida (http://sig.malaga.eu/territorio/servicios/geoportal/datosabiertos/dataset/?resource=da_aparcamientosmovilidadreducida)
+  Sevilla: http://discapacidadsevilla.org/gdas/estacionamientos.html (https://www.google.com/maps/d/u/0/viewer?msa=0&hl=es&ie=UTF8&t=m&ll=37.395937%2C-5.997677000000067&spn=0.047732%2C0.085831&z=13&source=embed&mid=1zZf1zvrl4c9zgM4SejkoADrMhoQ)
+  Huelva: http://www.huelva.es/infotrafico/listaAparcamientos.html (http://www.huelva.es/infotrafico/ListaAparcamientoparaMinusvalidos.pdf)
+  Córdoba: https://movilidad.cordoba.es/movilidad/informaciontrafico (https://movilidad.cordoba.es/informaciontrafico/index.php?minusvalidos=1&fechaInicio=2019-03-08)
+  Almería: Información solicitada en: https://transparencia.aytoalmeria.es/acceso-a-la-informacion/
+  Huelva: Información solicitada al correo en: http://www.huelva.es/portal/es/tr%C3%A1fico-y-movilidad
+  Cádiz: Información solicitada al correo disponible en: https://transparencia.cadiz.es/contacta/
+  Jáen: Información solicitada al correo disponible en http://www.aytojaen.es/portal/p_1_principal1.jsp?codResi=1
+
+De Sevilla, la información es de 2011
+
+Continuar con las siguientes ciudades más grandes:
+  Maracena, Armilla, La Zubia, Guadix, Motril, Baza
+  Marbella, Fuengirola, Antequera, Ronda
+  Jerez, Sanlúcar de Barrameda, El puerto de Santa María, Puerto Real, Chiclana,
+  Dos Hermanas, Alcalá de Guadáira, Utrera
+  Úbeda, Baeza
