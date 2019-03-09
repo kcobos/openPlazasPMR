@@ -19,8 +19,17 @@ for s in scripts:
 data_script = data_script.split("var _pageData = \"")[1]
 data = data_script[0:len(data_script)-4].replace("\\\\n","").replace("\\n","").replace("\\\"","\"")
 data = json.loads(data)
-data = data[1][6][0][4]+data[1][6][0][12]
-data = data[0:140]
+data = data[1][6][0][12][0][13][0]
+
+# print("\"direccion\";\"numero\";\"num_plazas\";\"observacion\";\"latitud\";\"longitud\"")
+plazas = []
+
+# latitud = data[i][1][0][0]
+# longitud = data[i][1][0][1]
+# direccion = data[i][5][0][1].split(",")[0]
+# numero = data[i][5][0][1].split(",")[1]
+# observacion = data[i][5][1][1]
+
 for i in range(len(data)):
     print(i)
     print(data[i])

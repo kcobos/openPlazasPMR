@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
 import xml.etree.ElementTree as ET
 
 from plaza import plaza
@@ -24,18 +26,18 @@ class granada(ciudad):
                 direccion = via
                 num_ini = text.find("NÚMERO") + 17
                 num_fin = text.find("</", num_ini)
-                numero = text[num_ini:num_fin].strip() 
+                numero = text[num_ini:num_fin].strip()
                 pla_ini = text.find("PLAZAS") + 17
                 pla_fin = text.find("</", pla_ini)
                 plazas =   text[pla_ini:pla_fin].strip()
                 obs_ini = text.find("OBSERVACIÓN") + 22
                 obs_fin = text.find("</", obs_ini)
                 nota = text[obs_ini:obs_fin]
-                
+
             for coor in node.iter("{http://www.opengis.net/kml/2.2}Point"):
                 for c in coor.iter("{http://www.opengis.net/kml/2.2}coordinates"):
                     spl = c.text.split(",")
                     latitud  =  spl[1].strip()
                     longitud = spl[0].strip()
-                    
+
             self.pmrs.append(plaza(direccion, numero, plazas, nota, latitud, longitud))
