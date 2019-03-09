@@ -1,4 +1,5 @@
 from plaza import plaza
+import json
 
 class ciudad:
     def __init__ ( self, file ):
@@ -14,11 +15,14 @@ class ciudad:
         csv = csv + plaza.csv_header()
         for pmr in self.pmrs:
             print(pmr)
-            csv = csv + pmr.csv() 
+            csv = csv + pmr.csv()
 
         return csv
 
-    
+
     def json( self):
         """ Devuelve el array de PMRs en JSON """
-        pass
+        js = []
+        for pmr in self.pmrs:
+            js.append(pmr)
+        return json.dumps([ob.__dict__ for ob in js])
