@@ -38,4 +38,4 @@ class granada(ciudad):
                     latitud  =  spl[1].strip()
                     longitud = spl[0].strip()
                     
-        self.pmrs.append(plaza(direccion, numero, plazas, nota, latitud, longitud))
+            self.pmrs.append(plaza(direccion, numero, plazas, nota, latitud, longitud))

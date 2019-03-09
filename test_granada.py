@@ -13,4 +13,6 @@ class TestCiudad( unittest.TestCase ):
         self.assertIsInstance(grana, granada, "Creada correctamente" )
         print(grana)
         self.assertIn( "SAN", grana.csv(), "CSV correcto" )
+        self.assertIn( "GORA", grana.csv(), "CSV correcto" )
+        self.assertIn( "ANTONIO", grana.csv(), "CSV correcto" )
         
