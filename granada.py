@@ -6,7 +6,10 @@ from plaza import plaza
 from ciudad import ciudad
 
 class granada(ciudad):
-
+    """
+       Parseo de los datos de Granada a partir de los datos de CGIM Granada
+    """
+    
     def __init__(self,file ):
         self.pmrs = []
         tree = ET.parse(file)

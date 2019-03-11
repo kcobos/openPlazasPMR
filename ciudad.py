@@ -2,6 +2,9 @@ from plaza import plaza
 import json
 
 class ciudad:
+    """ 
+    Clase base para parsear y contener las plazas de movilidad reducidad e una ciudad, a partir del fichero donde se encuentre
+    """
     def __init__ ( self, file ):
         self.pmrs = []
         pass

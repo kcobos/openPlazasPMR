@@ -9,6 +9,9 @@ from plaza import plaza
 from ciudad import ciudad
 
 class sevilla(ciudad):
+    """
+       Parseo de los datos de Sevilla, a partir de los datos de la web del ayuntamiento 
+    """
 
     def __init__(self,file ):
         self.pmrs = []
