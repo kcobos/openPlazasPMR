@@ -7,7 +7,10 @@ Capitales de provincia:
   Almería: Información solicitada en: https://transparencia.aytoalmeria.es/acceso-a-la-informacion/
   Huelva: Información solicitada al correo en: http://www.huelva.es/portal/es/tr%C3%A1fico-y-movilidad
   Cádiz: Información solicitada al correo disponible en: https://transparencia.cadiz.es/contacta/
-  Jáen: Información solicitada al correo disponible en http://www.aytojaen.es/portal/p_1_principal1.jsp?codResi=1
+  Jáen: Este enlace le leva al mapa: https://www.google.com/maps/d/u/0/embed?mid=1rBtBJe7So1EjZMMQNH3BWkILya0&ll=37.77712807937047%2C-3.7931129500000225&z=14
+
+
+
 
 De Sevilla, la información es de 2011
 
