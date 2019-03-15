@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import xml.etree.ElementTree as ET
-
+import requests, zipfile, io, os
 from plaza import plaza
 from ciudad import ciudad
 
@@ -9,10 +9,23 @@ class granada(ciudad):
     """
        Parseo de los datos de Granada a partir de los datos de CGIM Granada
     """
-    
-    def __init__(self,file ):
+
+    def __init__(self,url):
+
+        r = requests.get(url)
+        z = zipfile.ZipFile(io.BytesIO(r.content))
+
+        try:
+            os.mkdir("./granada")
+        except OSError as e:
+            if (e.errno != 17):
+                print("ERROR en la creación del directorio granada: {0}".format(e))
+                exit(-1)
+
+        z.extractall("./granada")
+
         self.pmrs = []
-        tree = ET.parse(file)
+        tree = ET.parse("./granada/doc.kml")
         root = tree.getroot()
 
         id = 0
@@ -44,3 +57,7 @@ class granada(ciudad):
                     longitud = spl[0].strip()
 
             self.pmrs.append(plaza(direccion, numero, plazas, nota, latitud, longitud))
+
+        for f in os.listdir("./granada"):
+            os.remove("./granada/"+f)
+        os.rmdir("./granada")
