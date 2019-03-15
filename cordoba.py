@@ -21,7 +21,7 @@ class cordoba(ciudad):
             lista = str(s.text).split('map.addMarker(')
             if len(lista) > 1:
                     jsons_str.append(lista[1].split('\',')[0]+'\',')
-                        
+
         # El primer elemento no es una plaza, lo descartamos
         jsons_str.pop(0)
 
@@ -54,13 +54,13 @@ class cordoba(ciudad):
             observacion = elementos[1].split('\\')[0].lstrip().rstrip()
             to_return['observacion'] = observacion
 
-            numero = re.findall("Nº \d+", str)
+            numero = re.findall(r"Nº \d+", str)
             if (len(numero)):
                     to_return ['numero'] = re.sub("[^0-9]", "", numero[0])
             else:
                     to_return['numero'] = ""
 
-            num_plazas = re.findall("\d+ PLAZA/S", str)
+            num_plazas = re.findall(r"\d+ PLAZA/S", str)
             if (len(num_plazas)):
                     to_return ['num_plazas'] = re.sub("[^0-9]", "", num_plazas[0])
             else:
