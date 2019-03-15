@@ -1,5 +1,2 @@
 lxml
 requests
-zipfile
-io
-os
