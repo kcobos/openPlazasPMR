@@ -13,22 +13,27 @@ def json_attr(str, attr):
 
 def json_title(str):
         to_return = {}
+        #Nos quedamos con title: para abajo
         str = str.split("title:")[1]
         elementos = str.split(',')
 
         # No se me ocurre nada más para quitar todos los caracteres del principio
         to_return['direccion'] = elementos[0].lstrip().lstrip('\'\\').lstrip().rstrip()
 
-        numeros = re.findall('\d', str)
-        if (len(numeros) < 2):
-                to_return['num_plazas'] = numeros[0]
-                to_return['numero'] = ""
-        else:
-                to_return['num_plazas'] = numeros[1]
-                to_return['numero'] = numeros[0]
-
         observacion = elementos[1].split('\\')[0].lstrip().rstrip()
         to_return['observacion'] = observacion
+
+        numero = re.findall("Nº \d+",str)
+        if (len(numero)):
+                to_return ['numero'] = re.sub("[^0-9]", "", numero[0])
+        else:
+                to_return['numero'] = ""
+
+        num_plazas = re.findall("\d+ PLAZA/S", str)
+        if (len(num_plazas)):
+                to_return ['num_plazas'] = re.sub("[^0-9]", "", num_plazas[0])
+        else:
+                to_return['num_plazas'] = ""
 
         return to_return
 
