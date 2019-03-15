@@ -2,23 +2,34 @@
 # -*- coding: utf-8 -*-
 
 from lxml import etree
-import re
-import json
+import re, json
+import requests
+from bs4 import BeautifulSoup
 
 from plaza import plaza
 from ciudad import ciudad
 
 class cordoba(ciudad):
-    def __init__(self,file ):
+    """
+       Parseo de los datos de Córdoba, a partir de los datos de la web del ayuntamiento
+    """
+
+    def __init__(self,url):
+
+        r = requests.get(url)
+        soup = BeautifulSoup(r.text, "lxml")
+
         self.pmrs = []
-        tree = etree.parse(file, etree.HTMLParser())
+        tree = etree.fromstring(soup.prettify(), etree.HTMLParser())
         scripts = tree.findall(".//script")
 
         jsons_str = []
 
         # En cada script del html hay una parte a partir de map.addMarker() que es la que nos interesa
         for s in scripts:
+            print(s)
             lista = str(s.text).split('map.addMarker(')
+            print(lista)
             if len(lista) > 1:
                     jsons_str.append(lista[1].split('\',')[0]+'\',')
 
