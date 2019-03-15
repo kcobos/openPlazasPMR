@@ -2,20 +2,23 @@
 # -*- coding: utf-8 -*-
 
 from lxml import etree
-import re
-import json
+import re, json
+import requests
 
 from plaza import plaza
 from ciudad import ciudad
 
 class sevilla(ciudad):
     """
-       Parseo de los datos de Sevilla, a partir de los datos de la web del ayuntamiento 
+       Parseo de los datos de Sevilla, a partir de los datos de la web del ayuntamiento
     """
 
-    def __init__(self,file ):
+    def __init__(self,url):
+
+        r = requests.get(url)
+
         self.pmrs = []
-        tree = etree.parse(file, etree.HTMLParser())
+        tree = etree.fromstring(r.text, etree.HTMLParser())
         scripts = tree.findall(".//script")
         data_script = None
 
